@@ -1,0 +1,48 @@
+{
+  "id": "token-action-hud-reign",
+  "title": "Token Action HUD: Reign",
+  "description": "A customized Token Action HUD integration for the Reign VTT system (ORE).",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "Llew ap Hywel"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "reign",
+        "type": "system",
+        "compatibility": {
+          "minimum": "2.1.1"
+        }
+      }
+    ],
+    "requires": [
+      {
+        "id": "token-action-hud-core",
+        "type": "module",
+        "compatibility": {
+          "minimum": "2.1.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/module.js"
+  ],
+  "styles": [
+    "styles/tah-reign.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ]
+}

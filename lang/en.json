@@ -1,0 +1,18 @@
+{
+  "tokenActionHud.reign.category.stats": "Stats",
+  "tokenActionHud.reign.category.skills": "Skills",
+  "tokenActionHud.reign.category.combat": "Combat",
+  "tokenActionHud.reign.category.techniques": "Techniques",
+  "tokenActionHud.reign.category.customMoves": "Custom Moves",
+  "tokenActionHud.reign.category.spells": "Spells",
+  "tokenActionHud.reign.category.disciplines": "Disciplines",
+  "tokenActionHud.reign.category.company": "Company",
+  "tokenActionHud.reign.category.threats": "Threats",
+
+  "tokenActionHud.reign.group.attacks": "Attacks",
+  "tokenActionHud.reign.group.preferredMoves": "Preferred Moves",
+  "tokenActionHud.reign.group.moves": "Moves",
+  "tokenActionHud.reign.group.companyActions": "Actions",
+  "tokenActionHud.reign.group.qualities": "Qualities",
+  "tokenActionHud.reign.group.threatActions": "Actions"
+}
