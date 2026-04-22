@@ -3,8 +3,8 @@
   "title": "Token Action HUD: Reign",
   "description": "A customized Token Action HUD integration for the Reign VTT system (ORE).",
   "version": "1.0.0",
-  "manifest": "https://github.com/YOUR-USERNAME/token-action-hud-reign/releases/latest/download/module.json",
-  "download": "https://github.com/YOUR-USERNAME/token-action-hud-reign/releases/download/v1.0.0/token-action-hud-reign.zip",
+  "manifest": "https://github.com/arawnlp-debug/token-action-hud-reign/releases/latest/download/module.json",
+  "download": "https://github.com/arawnlp-debug/token-action-hud-reign/releases/download/v1.0.0/token-action-hud-reign.zip",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
