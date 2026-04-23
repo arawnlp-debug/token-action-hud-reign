@@ -1,81 +1,216 @@
 /* ==========================================
-   Token Action HUD: Reign Theme
-   Force-loads fonts and overrides TAH Core
+   Token Action HUD: Reign Theme — v1.1
+   Harmonised with the Reign core system
+   colour palette and typography.
    ========================================== */
 
-/* 1. Import the Fonts directly from Google */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Signika:wght@400;600&display=swap');
+/* 1. Font Import — Cinzel only; Book Antiqua is a system font, Signika is not used by Reign */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
-/* 2. Override Core TAH Variables */
+/* ==========================================
+   2. CSS Variable Overrides
+   These map onto TAH Core's variable system.
+   ========================================== */
 #token-action-hud {
-    --tah-font-family: 'Cinzel', serif !important;
-    --tah-background: rgba(25, 25, 25, 0.95) !important;
-    --tah-border-color: #8b1f1f !important; /* Reign Blood Red */
-    --tah-button-background: rgba(40, 40, 40, 0.8) !important;
-    --tah-button-text-color: #e0e0e0 !important;
-    --tah-button-hover-background: #8b1f1f !important;
-    --tah-button-hover-text-color: #fef3c7 !important; /* Reign Parchment */
+    /* Layout */
+    --tah-background:              rgba(20, 18, 16, 0.96) !important;
+    --tah-border-color:            #8b1f1f !important;
+
+    /* Typography — mirrors --reign-font-display from variables.css */
+    --tah-font-family:             'Cinzel', 'Book Antiqua', Palatino, serif !important;
+
+    /* Buttons — rest state */
+    --tah-button-background:       rgba(35, 30, 28, 0.85) !important;
+    --tah-button-text-color:       #d4c5a9 !important;    /* warm parchment */
+
+    /* Buttons — hover state */
+    --tah-button-hover-background: #7a1a1a !important;
+    --tah-button-hover-text-color: #fef3c7 !important;
 }
 
-/* 3. Force Top-Level Tabs (Categories) to style correctly */
+/* ==========================================
+   3. Category / Title Buttons
+   ========================================== */
 #token-action-hud .tah-category-button,
 #token-action-hud .tah-title-button,
 #token-action-hud .tah-category-text,
 #token-action-hud .tah-title-text {
-    font-family: 'Cinzel', serif !important;
-    font-weight: bold !important;
-    color: #8b1f1f !important;
+    font-family:    'Cinzel', serif !important;
+    font-weight:    700 !important;
+    color:          #a02828 !important;
     text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
 }
 
 #token-action-hud .tah-category.hover .tah-category-button,
 #token-action-hud .tah-category-button:hover {
-    color: #fef3c7 !important;
-    background-color: #8b1f1f !important;
+    color:            #fef3c7 !important;
+    background-color: #7a1a1a !important;
 }
 
-/* 4. Base Action Button Styling */
+/* ==========================================
+   4. Group / Subtitle Headers
+   ========================================== */
+#token-action-hud .tah-group-header,
+#token-action-hud .tah-subtitle-text {
+    font-family:    'Cinzel', serif !important;
+    font-weight:    700 !important;
+    font-size:      0.75em !important;
+    color:          #a02828 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    border-bottom:  1px solid rgba(139, 31, 31, 0.45) !important;
+    padding-bottom: 2px !important;
+}
+
+/* ==========================================
+   5. Action Buttons — Base
+   ========================================== */
 #token-action-hud .tah-button,
 #token-action-hud .tah-action {
-    font-family: 'Cinzel', serif !important;
-    border: 1px solid #444 !important;
-    border-radius: 4px !important;
-    transition: all 0.2s ease-in-out !important;
+    font-family:   'Cinzel', serif !important;
+    font-size:     0.78em !important;
+    border:        1px solid rgba(100, 80, 60, 0.5) !important;
+    border-radius: 3px !important;
+    transition:    background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease !important;
 }
 
-/* Hover Effects for Actions */
+/* Hover */
 #token-action-hud .tah-button:hover,
 #token-action-hud .tah-action:hover {
     border-color: #8b1f1f !important;
-    box-shadow: 0 0 5px rgba(139, 31, 31, 0.8) !important;
+    box-shadow:   0 0 6px rgba(139, 31, 31, 0.65) !important;
 }
 
-/* 5. Active / Equipped Items (Using the Green from your sheet) */
+/* ==========================================
+   6. Active State — Equipped / Passive
+   Used for: equipped weapons, equipped armor,
+   passive techniques, active aim bonus, pledged qualities.
+   ========================================== */
 #token-action-hud .tah-button.active,
 #token-action-hud .tah-action.active {
-    background-color: #2d5a27 !important; /* Reign Success Green */
-    color: #fef3c7 !important;
-    border-color: #1a3616 !important;
-    box-shadow: inset 0 0 8px rgba(0,0,0,0.5) !important;
+    background-color: rgba(35, 70, 30, 0.75) !important;  /* reign success green */
+    color:            #d4f0c8 !important;
+    border-color:     #2d5a27 !important;
+    box-shadow:       inset 0 0 6px rgba(0, 0, 0, 0.55) !important;
 }
 
-/* 6. Group Headers (Inside the dropdowns) */
-#token-action-hud .tah-group-header,
-#token-action-hud .tah-subtitle-text {
-    font-family: 'Cinzel', serif !important;
-    font-weight: bold !important;
-    color: #8b1f1f !important;
-    text-transform: uppercase !important;
-    border-bottom: 1px solid #8b1f1f !important;
+#token-action-hud .tah-button.active:hover,
+#token-action-hud .tah-action.active:hover {
+    background-color: #2d5a27 !important;
+    border-color:     #3d7835 !important;
+    box-shadow:       0 0 8px rgba(45, 90, 39, 0.8), inset 0 0 6px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* 7. Sub-text (like ED/MD indicators or dice pools) */
-#token-action-hud .tah-info1, 
-#token-action-hud .tah-info2,
+/* ==========================================
+   7. Depleted / Broken State
+   Used for: morale=0, effective quality=0,
+   magnitude=0.
+   ========================================== */
+#token-action-hud .tah-button.tah-reign-depleted,
+#token-action-hud .tah-action.tah-reign-depleted {
+    background-color: rgba(80, 20, 20, 0.5) !important;
+    color:            #9a6060 !important;
+    border-color:     #5a1515 !important;
+    opacity:          0.8 !important;
+}
+
+#token-action-hud .tah-button.tah-reign-depleted:hover,
+#token-action-hud .tah-action.tah-reign-depleted:hover {
+    background-color: rgba(100, 25, 25, 0.7) !important;
+    border-color:     #8b1f1f !important;
+    box-shadow:       0 0 5px rgba(139, 31, 31, 0.5) !important;
+}
+
+/* ==========================================
+   8. Damaged State
+   Uses --reign-color-brass (#d97706) — the system's
+   canonical colour for Sovereignty, Armor, and Shields.
+   ========================================== */
+#token-action-hud .tah-button.tah-reign-damaged,
+#token-action-hud .tah-action.tah-reign-damaged {
+    background-color: rgba(90, 55, 5, 0.6) !important;   /* brass-tinted dark */
+    color:            #f5c842 !important;                  /* warm brass highlight */
+    border-color:     #d97706 !important;                  /* --reign-color-brass */
+}
+
+#token-action-hud .tah-button.tah-reign-damaged:hover,
+#token-action-hud .tah-action.tah-reign-damaged:hover {
+    background-color: rgba(120, 75, 10, 0.8) !important;
+    border-color:     #f5a623 !important;
+    box-shadow:       0 0 5px rgba(217, 119, 6, 0.65) !important;  /* brass glow */
+}
+
+/* ==========================================
+   9. Info Badges (dice pool, ratings, tags)
+   TAH Core provides .tah-info1/.info2/.info3.
+   We differentiate them by semantic role.
+   ========================================== */
+
+/* info1 — Primary value (pool size, intensity, etc.) */
+#token-action-hud .tah-info1 {
+    font-family:      var(--font-primary), sans-serif !important;
+    font-weight:      600 !important;
+    font-size:        0.72em !important;
+    color:            #fef3c7 !important;
+    background-color: rgba(139, 31, 31, 0.55) !important;
+    border:           1px solid rgba(139, 31, 31, 0.35) !important;
+    border-radius:    3px !important;
+    padding:          1px 5px !important;
+}
+
+/* info2 — Secondary label (attribute abbreviation, tags) */
+#token-action-hud .tah-info2 {
+    font-family:      var(--font-primary), sans-serif !important;
+    font-weight:      400 !important;
+    font-size:        0.68em !important;
+    color:            #b8a88a !important;
+    background-color: rgba(0, 0, 0, 0.45) !important;
+    border:           1px solid rgba(100, 85, 65, 0.35) !important;
+    border-radius:    3px !important;
+    padding:          1px 4px !important;
+}
+
+/* info3 — Tertiary / overflow (rarely used) */
 #token-action-hud .tah-info3 {
-    font-family: 'Signika', sans-serif !important; /* Standard readable font for numbers */
-    color: #fef3c7 !important;
-    background-color: rgba(0, 0, 0, 0.6) !important;
-    border-radius: 3px !important;
-    padding: 1px 4px !important;
+    font-family:      var(--font-primary), sans-serif !important;
+    font-size:        0.65em !important;
+    color:            #9a9080 !important;
+    background-color: rgba(0, 0, 0, 0.35) !important;
+    border-radius:    3px !important;
+    padding:          1px 4px !important;
+}
+
+/* ==========================================
+   10. Scrollbar (webkit) — styled to match
+   ========================================== */
+#token-action-hud *::-webkit-scrollbar {
+    width: 4px !important;
+}
+
+#token-action-hud *::-webkit-scrollbar-track {
+    background: rgba(15, 12, 10, 0.6) !important;
+}
+
+#token-action-hud *::-webkit-scrollbar-thumb {
+    background:    #5a1515 !important;
+    border-radius: 2px !important;
+}
+
+#token-action-hud *::-webkit-scrollbar-thumb:hover {
+    background: #8b1f1f !important;
+}
+
+/* ==========================================
+   11. Tooltip override
+   TAH Core already renders tooltips; this just
+   ensures our font is applied.
+   ========================================== */
+.tah-tooltip {
+    font-family: var(--font-primary), sans-serif !important;
+    font-size:   0.82em !important;
+    color:       #d4c5a9 !important;
+    background:  rgba(18, 15, 12, 0.97) !important;
+    border:      1px solid #5a1515 !important;
+    border-radius: 4px !important;
 }
