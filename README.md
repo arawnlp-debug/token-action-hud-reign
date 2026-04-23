@@ -11,7 +11,7 @@ A customized Token Action HUD integration for the Reign VTT system (ORE) in Foun
 1. Open Foundry VTT and go to the **Add-on Modules** tab.
 2. Click **Install Module**.
 3. Paste the following Manifest URL into the field at the bottom:
-   *(You will add the link to your module.json here later once you publish a release)*
+   *https://github.com/arawnlp-debug/token-action-hud-reign/releases/latest/download/module.json*
 4. Click Install.
 
 ## Requirements
